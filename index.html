@@ -3,74 +3,94 @@
   <meta charset="utf-8" />
   <head>
     <title>Bark.io</title>
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7148712/797046/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7148712/797046/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
     <style type="text/css">
-      /*
-      font-family: 'Whitney SSm A', 'Whitney SSm B'; 
-      font-family: 'Chronicle SSm A', 'Chronicle SSm B'; 
-      */
+      body {
+        font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Chronicle SSm A', 'Chronicle SSm B'; 
+        font-weight: 500;
+      }
+
+      section.purple {
+        background-color: hsl(270, 69%, 70%);
+      }
     </style>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="container">
         <h4>Bark.io</h4>
         <button>Sign Up</button>
       </nav>
     </header>
 
-    <section>
-      <h1>Bark.io</h1>
-      <h2>The simplest way to find adoptable dogs around you.</h2>
-      <p><button>Sign Up</button></p>
+    <section class="purple">
+      <div class="container">
+        <h1>Bark.io</h1>
+        <h2>The simplest way to find adoptable dogs around you.</h2>
+        <p><button>Sign Up</button></p>
+      </div>
     </section>
 
     <section>
-      <h1>Love at first swipe.</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <div class="container">
+        <h2>Love at first swipe.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
     </section>
 
     <section>
-      <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.
-      </p>
-      <p>
-        Heather &amp; Buffy
-        Matched March 2012
-      </p>
+      <div class="container">
+        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Heather &amp; Buffy
+          Matched March 2012
+        </p>
+      </div>
     </section>
 
     <section>
-      <h1>Find your souldog today.</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
-      <p><button>Sign Up</button></p>
+      <div class="container">
+        <h2>Find your souldog today.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p><button>Sign Up</button></p>
 
-      <ul class="conversation">
-        <li class="coco">Bark bark bark bark! Bark bark bark?</li>
-        <li class="visnu">Who’s a good girl? Who’s a good girl? You are!</li>
-        <li class="coco">Bark bark! 👌</li>
+        <ul class="conversation">
+          <li class="coco">Bark bark bark bark! Bark bark bark?</li>
+          <li class="visnu">Who’s a good girl? Who’s a good girl? You are!</li>
+          <li class="coco">Bark bark! 👌</li>
+        </div>
       </div>
     </section>
 
     <footer>
-      <a href="#">About</a>
-      <a href="#">Jobs</a>
-      <a href="#">Press</a>
-      &copy; Bark.io
+      <div class="container">
+        <a href="#">About</a>
+        <a href="#">Jobs</a>
+        <a href="#">Press</a>
+        &copy; Bark.io
+      </div>
     </footer>
   </body>
 </html>
