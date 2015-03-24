@@ -5,18 +5,140 @@
     <title>Bark.io</title>
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7148712/797046/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
       body {
-        font-family: 'Whitney SSm A', 'Whitney SSm B'; 
+        font-family: 'Whitney SSm A', 'Whitney SSm B';
+
       }
 
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Chronicle SSm A', 'Chronicle SSm B'; 
+        font-family: 'Chronicle SSm A', 'Chronicle SSm B';
         font-weight: 500;
       }
 
+      nav.container {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        text-align: center;
+        padding: 10px 100px;
+        background-color: hsl(270, 69%, 70%);
+        box-shadow: none;
+        z-index: 2;
+      }
+
+      nav.container.sticky {
+        box-shadow: 1px 0 5px rgba(0,0,0, 0.5);
+      }
+      nav.container {
+        transition: all 500ms;
+      }
+      nav.container > * {
+        transition: all 1s;
+      }
+      nav.container.white {
+        background-color: #fff;
+        color: hsl(270, 69%, 70%);
+      }
+      nav.container.white h4 {
+        color: hsl(270, 69%, 70%);
+      }
+
+      nav.container.white .hamburger {
+        color: hsl(270, 69%, 70%);
+      }
+
+      nav.container.white button {
+        color: hsl(270, 69%, 70%);
+        border-color: hsl(270, 69%, 70%);
+      }
+
+      nav.container h4 {
+        color: #fff;
+        opacity: 0.7;
+        margin: 0;
+        position: absolute;
+        top: 20px;
+        left: 49%;
+      }
+      nav.container .sign-in {
+        float: right;
+      }
+      nav.container .hamburger {
+        font-size: 28px;
+        color: #fff;
+        float: left;
+      }
       section.purple {
         background-color: hsl(270, 69%, 70%);
+      }
+
+      section.purple .container {
+        padding-top: 100px;
+        position: relative;
+      }
+
+      section.purple .tagline {
+        color: #fff;
+        float: left;
+        width: 50%;
+        padding-left: 100px;
+      }
+
+      section.purple .hero {
+        background-image: url('images/hero.png');
+        width: 413px;
+        height: 701px;
+        margin-left: 55%;
+        background-clip: content-box;
+      }
+
+      section.purple .tagline h1 {
+        font-size: 48px;
+      }
+
+      section.purple .tagline h2 {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 300;
+        opacity: 0.7;
+      }
+
+      button {
+        background-color: transparent;
+        border: 2px solid #fff;
+        padding: 10px 25px;
+        border-radius: 4px;
+        color: #fff;
+      }
+
+      @media (max-width: 500px) {
+        nav.container {
+          padding: 10px 50px 0;
+        }
+        nav.container .sign-in {
+          display: none;
+        }
+        section.purple .container {
+          padding: 100px 50px 0;
+        }
+        section.purple .tagline {
+          float: none;
+          width: 100%;
+          padding-left: 0px;
+        }
+
+        section.purple .hero {
+          position: relative;
+          margin-left: 0px;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
       }
     </style>
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -24,16 +146,21 @@
   <body>
     <header>
       <nav class="container">
+        <div class="hamburger">=</div>
         <h4>Bark.io</h4>
-        <button>Sign Up</button>
+        <button class="sign-in btn">Sign In</button>
       </nav>
     </header>
 
     <section class="purple">
       <div class="container">
-        <h1>Bark.io</h1>
-        <h2>The simplest way to find adoptable dogs around you.</h2>
-        <p><button>Sign Up</button></p>
+        <div class="tagline">
+          <img src="images/logo.svg" />
+          <h1>Bark.io</h1>
+          <h2>The simplest way to find adoptable dogs around you.</h2>
+          <p><button>Sign Up</button></p>
+        </div>
+        <div class="hero"></div>
       </div>
     </section>
 
@@ -92,5 +219,23 @@
         &copy; Bark.io
       </div>
     </footer>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).scroll(function() {
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop > 0) {
+          $("nav.container").addClass("sticky");
+        } else {
+          $("nav.container").removeClass("sticky");
+        }
+
+        if (scrollTop > 700) {
+          $("nav.container").addClass("white");
+        } else {
+          $("nav.container").removeClass("white");
+        }
+      })
+    });
+    </script>
   </body>
 </html>
